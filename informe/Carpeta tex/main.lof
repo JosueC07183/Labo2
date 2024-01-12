@@ -1,0 +1,30 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces MC PIC12F675. Tomado de \cite {web6}}}{2}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Pines del PIC12F765. Tomado de \cite {web2}}}{3}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Diagrama de bloques del PIC12F765. Tomado de \cite {web2}}}{3}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Registros 9-1. Tomado de \cite {web2}.}}{5}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Representación de los 7 segmentos. Tomado de \cite {web3}}}{6}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Otros pines del display de 7 segmentos.}}{6}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Decodificador CD4511BE. Tomado de \cite {web6}}}{7}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Decodificador de SimulIDE.}}{7}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Botón. Tomado de \cite {web6}}}{8}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Control del efecto rebote. Tomado de \cite {web5}}}{8}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Inversor/Compuerta not. Tomado de \cite {web6}}}{9}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Inversor. Elaboración propia.}}{9}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Filtro RC para evitar rebote.}}{10}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Protección de los LEDs}}{10}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Conexión del BCD.}}{11}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Circuito del bingo.}}{11}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Diagrama de bloques juego bingo.}}{12}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Nueva modificación del circuito}}{13}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Números en la tombola.}}{13}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Corriente eléctrica en los 7S.}}{13}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Resultados del nuevo circuito.}}{13}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Optimizando resultados.}}{14}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Diagrama de bloques mostrar número aleatorio.}}{14}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Diagrama de bloques mostrar combinaciones de números.}}{15}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Primer número}}{15}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Segundo número}}{15}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Tercer número}}{16}{figure.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Cuarto número}}{16}{figure.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Conclusión del juego.}}{16}{figure.29}%
