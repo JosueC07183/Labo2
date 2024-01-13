@@ -1,48 +1,11 @@
 \begin{thebibliography}{1}
 
-\bibitem{web6}
-MicroJpm.
-\newblock Tienda de componentes.
-\newblock All about Circuits
-  \url{https://www.microjpm.com/search/?x=15&y=12&text=}, octubre 2017.
-\newblock Accedido en enero de 2024.
-
-\bibitem{web2}
-Microchip.
-\newblock Pic12f675 datasheet (pdf) download - microchip technology.
-\newblock ALLDATASHEET.COM,
-  \url{https://pdf1.alldatasheet.com/datasheet-pdf/download/348702/MICROCHIP/PIC12F675.html},
-  Agosto 2003.
-\newblock Accedido en enero de 2024.
-
-\bibitem{web3}
-Paul Nicholls.
-\newblock 7 segment displays.
-\newblock Electronics resources,
-  \url{https://pfnicholls.com/Electronics/LEDDisplays.html}, Mayo 2019.
-\newblock Accedido en enero de 2024.
-
-\bibitem{web5}
-Jens Christoffersen.
-\newblock Switch bounce and how to deal with it.
-\newblock All about Circuits
-  \url{https://www.allaboutcircuits.com/technical-articles/switch-bounce-how-to-deal-with-it/},
-  setiembre 2015.
-\newblock Accedido en enero de 2024.
-
 \bibitem{web}
-Sigma.
-\newblock Sigma electrónica.
-\newblock Sigma, \url{https://www.sigmaelectronica.net/producto/pic12f675-ip/},
-  Agosto 2017.
-\newblock Accedido en enero de 2024.
-
-\bibitem{web4}
-Fairchid semiconductor.
-\newblock Bcd-to-7 segment latch/decoder/driver.
-\newblock ALLDATASHEET.ES,
-  \url{https://www.alldatasheet.es/datasheet-pdf/pdf/50863/FAIRCHILD/CD4511BC.html},
-  Junio 1987.
+Atmel.
+\newblock Features attiny2313a/attiny4313.
+\newblock Atmel,
+  \url{https://ww1.microchip.com/downloads/en/DeviceDoc/doc8246.pdf}, Agosto
+  2017.
 \newblock Accedido en enero de 2024.
 
 \end{thebibliography}
