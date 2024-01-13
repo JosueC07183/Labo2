@@ -9,6 +9,7 @@ Arquitectura RISC. Al ejecutar poderosas instrucciones en un solo ciclo de reloj
  \caption{Pines del ATtiny4313. Tomado de \cite{web}.}
  \label{fig1}
 \end{figure}
+\subsubsection*{Características generales}
 A continuación, se describen las características de cada pin para tener un mejor entendimiento de lo que se puede hacer con cada uno de ellos \cite{web}.
 \begin{enumerate}
 \item PA2-RESET/dW/PCINT10: RESET: entrada activa en bajo y activada por un 1 el \texttt{RSTDISBL} fuse. El pullup se activa y el controlador de salida y la entrada digital se desactivan cuando se usa el pin de RESET. \texttt{dW}: Cuando el fusible debugWIRE Enable (DWEN) está programado y los bits de bloqueo están sin programar, se activa el sistema debugWIRE dentro del dispositivo de destino. El pin RESET del puerto está configurado como un pin de I/O bidireccional de cable Y (drenaje abierto) con pull-up habilitado y se convierte en la puerta de enlace de comunicación entre el objetivo y el emulador. Sirve como I/O y tiene la opción de RESET. Solo que debe ponersele un 0 para que funcione como I/O. Tiene una resistencia interna de pull up. \texttt{PCINT10}: Fuente de interrupción de cambio de pin. El pin PA2 sirve como una fuente de interrupción externa.
@@ -36,8 +37,21 @@ y CS01 en el registro de control del timer1/counter1 (TCCR1) \texttt{PCINT16}: e
 \item PB7-USCK/SCL/PCINT7. \texttt{USCK}: interfaz serial de reloj modo de 3 cables. \texttt{SCL}: reloj serial para USI modo de dos cables. \texttt{PCINT7}: este pin sirve como fuente de interrupción externa.
 \item VCC: fuente de alimentación.
 \end{enumerate}
+En la figura \ref{fig2} se muestra el diagrama de bloques de este microcontrolador.
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\linewidth]{Imagenes/2.png}
+ \caption{Diagrama de bloques del ATtiny4313. Tomado de \cite{web}.}
+ \label{fig2}
+\end{figure}
+Otro detalle importante es considerar los valores máximos con los que se puede trabajar el ATtiny4313.
+\begin{figure}[H]
+\centering
+\includegraphics[width=.5\linewidth]{Imagenes/3.png}
+ \caption{Diagrama de bloques del ATtiny4313. Tomado de \cite{web}.}
+ \label{fig3}
+\end{figure}
 
-\subsubsection*{Características generales}
 \subsection*{Lista de componentes}
 
 \begin{table}[H]
