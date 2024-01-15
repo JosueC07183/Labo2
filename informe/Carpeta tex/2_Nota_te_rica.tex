@@ -52,6 +52,59 @@ Otro detalle importante es considerar los valores máximos con los que se puede 
  \label{fig3}
 \end{figure}
 
+\subsection*{Periféricos}
+La descripción de los registros e instrucciones utilizados son los siguientes:
+\begin{itemize}
+    \item \textbf{DDRxn}: Registro de dirección de datos. Encargado de determinar si los pines van a trabajar como entradas (0) o como salidas (1). El registro de dirección de datos se observa en la siguiente imagen:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.9\linewidth]{informe/Carpeta tex/Imagenes/DirectionD.png}
+        \caption{Registro de dirección de datos. Tomado de \cite{web}.}
+        \label{fig4}
+    \end{figure}
+    
+	\item \textbf{PORTxn}: Registro de datos. Permite establecer los pines con un estado inicial, ya sea en alto o en bajo, esto para el uso de señales digitales.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.9\linewidth]{informe/Carpeta tex/Imagenes/DataD.png}
+        \caption{Registro de datos. Tomado de \cite{web}.}
+        \label{fig5}
+    \end{figure}
+
+    \item \textbf{GIMSK}: (General Interrupt Mask Register). Registro encargado de habilitar y deshabilitar interrupciones. Cuando se desea leer interrupciones es necesario configurar este registro.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.9\linewidth]{informe/Carpeta tex/Imagenes/GIMSK.png}
+        \caption{Configuración del registro GIMSK. Tomado de \cite{web}.}
+        \label{fig6}
+    \end{figure}
+
+    \item \textbf{PCMSKn}: Usado para habilitar o deshabilitar ciertos pines para que trabajen como pines de interrupción.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.9\linewidth]{informe/Carpeta tex/Imagenes/PCMSK.png}
+        \caption{Registro habilitación de interrupciones. Tomado de \cite{web}.}
+        \label{fig7}
+    \end{figure}
+
+    \item \textbf{TCCR0x}: Este es el registro de control para el contador 0 (x puede ser A o B), además, permite establecer el prescaler y modos de comparación. Hay dos registros de control para el contador 0, ya sea el A o el B.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.9\linewidth]{informe/Carpeta tex/Imagenes/TCCR0A.png}
+        \caption{Registro de control de Timer/Counter. Tomado de \cite{web}.}
+        \label{fig8}
+    \end{figure}
+
+    \item \textbf{OCR0A}: Registro que guarda el valor de comparación. Cuando el valor de OCR0A es igual al de TCNT0 la señal del comparador se pone en alto.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.9\linewidth]{informe/Carpeta tex/Imagenes/OCR0A.png}
+        \caption{Registro de comparación de salida A. Tomado de \cite{web}.}
+        \label{fig9}
+    \end{figure}
+    
+\end{itemize}
+
 \subsection*{Lista de componentes}
 
 \begin{table}[H]
