@@ -2,3 +2,9 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces Pines del ATtiny4313. Tomado de \cite {web}.}}{2}{figure.1}%
 \contentsline {figure}{\numberline {2}{\ignorespaces Diagrama de bloques del ATtiny4313. Tomado de \cite {web}.}}{4}{figure.2}%
 \contentsline {figure}{\numberline {3}{\ignorespaces Diagrama de bloques del ATtiny4313. Tomado de \cite {web}.}}{5}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Registro de dirección de datos. Tomado de \cite {web}.}}{5}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Registro de datos. Tomado de \cite {web}.}}{5}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Configuración del registro GIMSK. Tomado de \cite {web}.}}{5}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Registro habilitación de interrupciones. Tomado de \cite {web}.}}{6}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Registro de control de Timer/Counter. Tomado de \cite {web}.}}{6}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Registro de comparación de salida A. Tomado de \cite {web}.}}{6}{figure.9}%
