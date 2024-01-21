@@ -1,45 +1,128 @@
+/**
+ * @file laboratorio2.c
+ * @authors Kevin Campos Campos, Josué Salmerón Córdoba
+ * @brief En este código si simula el comportamiento de una lavadora por medio de máquina de estados.
+ * @version 0.1
+ * @date 2024-01-20
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include <avr/io.h>
 #include <util/delay.h>
 #include <avr/interrupt.h>
 
 // Duraciones de cargas inciales
 #define baja    9
-#define media   16
-#define alta    21
+#define media   19
+#define alta    27
 
 // Variable que guarda el valor inicial del tiempo
 volatile int tiempo_inicio = 0;
 volatile int segundos = 0;
+volatile int pausa = 0;
 volatile uint8_t unidades;
 volatile uint8_t decenas;
 
-// volatile int estados 
-
-
-// REV, meter funcion de limpiar para apagar leds
+void estados();
 
 // Funcion para encender leds de carga
 void led_carga() {
     if (tiempo_inicio == alta) {
         PORTD |= (1 << PD4);
+        estados();
     }
     else if (tiempo_inicio == media) {
         PORTD |= (1 << PD5);
+        estados();
     }
     else if (tiempo_inicio == baja) {
         PORTD |= (1 << PD6);
+        estados();
     }
 }
 
 // Funcion para apagar leds basado en criterios
 void led_off() {
     // Apagar leds de carga
-    if (tiempo_inicio == 0)
-    {
+    if (tiempo_inicio == 0) {
         PORTD = (PORTD & 0x0F); // Limpiar pines de LEDs
     }
-    
+    if (segundos == tiempo_inicio) {
+        PORTA = (PORTA | 0x4) & 0x4; // Apagar LEDs de estado
+    }
 }
+
+// Funcion encargada de encender los LEDs dependiendo del estado en el que se encuentre
+void estados() {
+    switch (tiempo_inicio) {
+        // Carga baja
+        case baja:
+            if (segundos == 0) {
+                // Suministro, 00
+                PORTA &= ~(1 << PA2); // Encender leds de estado suministro
+            }
+            else if (1 <= segundos && segundos < 4) {
+                // Lavar, 01
+                PORTA |= (1 << PA0);
+            }
+            else if (4 < segundos && segundos < 7) {
+                // Enjuagar, 10
+                PORTA &= ~(1 << PA0);
+                PORTA |= (1 << PA1);
+            }
+            else if (7 <= segundos && segundos < tiempo_inicio) {
+                // Enjuagar, 11
+                PORTA |= (1 << PA0);
+            }
+            led_off(); // Apagar todo
+        break;
+        
+        // Carga media
+        case media:
+            if (segundos == 0) {
+                // Suministro, 00
+                PORTA &= ~(1 << PA2); // Encender leds de estado suministro
+            }
+            else if (2 <= segundos && segundos < 8) {
+                // Lavar, 01
+                PORTA |= (1 << PA0);
+            }
+            else if (8 <= segundos && segundos < 13) {
+                // Enjuagar, 10
+                PORTA &= ~(1 << PA0);
+                PORTA |= (1 << PA1);
+            }
+            else if (13 <= segundos && segundos < tiempo_inicio) {
+                // Enjuagar, 11
+                PORTA |= (1 << PA0);
+            }
+            led_off(); // Apagar todo
+        break;
+
+        // Carga alta
+        case alta:
+            if (segundos == 0) {
+                // Suministro, 00
+                PORTA &= ~(1 << PA2); // Encender leds de estado suministro
+            }
+            else if (3 <= segundos && segundos < 13) {
+                // Lavar, 01
+                PORTA |= (1 << PA0);
+            }
+            else if (14 <= segundos && segundos < 19) {
+                // Enjuagar, 10
+                PORTA &= ~(1 << PA0);
+                PORTA |= (1 << PA1);
+            }
+            else if (19 <= segundos && segundos < tiempo_inicio) {
+                // Enjuagar, 11
+                PORTA |= (1 << PA0);
+            }
+            led_off(); // Apagar todo
+        break;
+    }
+} 
 
 // Funcion encargada de mostrar el conteo en los displays
 void display(volatile int tiempo) {
@@ -70,8 +153,9 @@ void init() {
     ////////////// Salidas, se ocupan 4, 1 para el selector y los otros 3 para mostrar numeros del 0-9
     DDRB = 0xff; // Todos los pines del puerto B como salidas
     DDRD = 0x70; // D6, D5, D4 como salidas y D0, D1, D2, D3 como entradas
-    
-    //PORTD |= (1 << PD6); // Esto hace que el pin PB1 inicie en bajo
+    DDRA = 0x07; // A0, A1, A2 como salidas
+    PORTA |= (1 << PA2); // Iniciar PA2 en alto (LEDs de estado apagados)
+
 
     // Esto se usa para aplicar una mascara para habilitar interrupcion solo por un pin a la vez porque se pueden
     // habilitar interrupciones por puerto
@@ -144,9 +228,10 @@ ISR(TIMER1_COMPA_vect) {
         segundos = 0;
     }
     else {
-        segundos++; // Llevar cuenta de cada segundo que pasa REV, TAL VEZ SEA NECESARIO USAR ++segundos.
+        segundos++; // Llevar cuenta de cada segundo que pasa
     }
     led_off(); // Revisar si hay que apagar los leds cada segundo que pasa
+    estados(); // Revisar por cambios de los estados cada segundo
 }
 
 int main(void) {
@@ -158,3 +243,4 @@ int main(void) {
     }
     return 0;
 }
+
