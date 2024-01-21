@@ -151,7 +151,12 @@ Del esquemático \ref{FigWW}, es claro notar que el circuito general se compone 
         \label{fig11}
     \end{figure}
 se muestra que el pin B0, es una entrada para este caso, y esto indica que ocupará habilitar la resistencia de pull-up con el enmáscarado \texttt{GIMSK}. Por su parte, el pin B4 se trata de una salida, entonces basta con hacer uso de \texttt{DDRB=0b00010000}, para que el programa entienda que es una salida. De esa manera, presionando el botón, es posible encender el led adecuadamente.\par
-La anterior fue de gran importancia para entender el comportamiento de las interrupciones y todo lo necesario para hacer que éstas trabajen adecuadamente. Por lo que una de las primeras etapas realizadas para este laboratorio fue encender LEDs por medio de botones haciendo uso de interrupciones.
+La anterior fue de gran importancia para entender el comportamiento de las interrupciones y todo lo necesario para hacer que éstas trabajen adecuadamente. Por lo que una de las primeras etapas realizadas para este laboratorio fue encender LEDs por medio de botones haciendo uso de interrupciones. No sin antes mencionar que al trabajar con botones es importante diseñarlos de tal manera que el efecto rebote cause falsas lecturas en el circuito, por tanto, se diseñó un factor de $\tau$ igual para todos los botones.
+\begin{equation}
+\tau = RC \Rightarrow \tau = \SI{100}{\kilo\ohm} \cdot \SI{100}{\nano\farad} = 0.01
+\end{equation}
+Lo que es equivalente a frecuencia de \SI{100}{\Hz}.
+
 \begin{figure}[H]
    \begin{minipage}{0.48\textwidth}
      \centering
@@ -164,7 +169,7 @@ La anterior fue de gran importancia para entender el comportamiento de las inter
      \caption{Indicador de carga media }\label{F13}
    \end{minipage}
 \end{figure}
-Primero se presiona el botón, donde es claro notar el flujo de corriente esperado que por medio de una interrupción le llegará al LED de carga media, y de manera inmediata es posible ver que el LED se enciende tal como se esperaba. Además, note que le está llegando una alimentación de \SI{5}{\volt}, lo que es una tensión eléctrica adecuada para que este componente no se dañe. Esta prueba se realizó con todos los demás LEDs. \par
+Primero se presiona el botón, donde es claro notar el flujo de corriente esperado que por medio de una interrupción le llegará al LED de carga media, y de manera inmediata es posible ver que el LED se enciende tal como se esperaba. Además, note que le está llegando una alimentación de \SI{5}{\volt}, lo que es una tensión eléctrica adecuada para que este componente no se dañe. Esta prueba se realizó con todos los demás LEDs.\par
 Ahora, la segunda etapa consistió en mostrar en los displays de segmentos de la figura \ref{fig10} con los tiempos totales de cada carga que se le vaya asignar a la lavadora. Esto consiste en programar una cuenta regresiva haciendo uso de los pines B, los cuales están configurados como salida y así mostrar el respectivo número definido previamente en el código. Entonces, al presionar cualquiera de los 3 botones los display mostrarán el total del tiempo para cada carga tal como se muestra a continuación:
 \begin{figure}[H]
         \centering
@@ -172,38 +177,22 @@ Ahora, la segunda etapa consistió en mostrar en los displays de segmentos de la
         \caption{Encendido de un LED con cuenta regresiva.}
         \label{fig14}
     \end{figure}
-Lo primero a resaltar es que la corriente eléctrica que le está llegando a los displays es la adecuada, ya que no supera los \SI{0.02}{\A}, así como al LED. Luego, el uso de las interrupciones para este caso (y los demás) presentan el resultado esperado a la hora de presionar el botón con carga alta.\par
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Lo primero a resaltar es que la corriente eléctrica que le está llegando a los displays es la adecuada, ya que no supera los \SI{0.02}{\A}, así como al LED. Además, note que a los displays hay conectada una resistencia de \SI{90}{\ohm} para brindar protección a cada LED, esto justifica el hecho de no ver un parpadeo en cada segmento. Luego, el uso de las interrupciones para este caso (y los demás) presentan el resultado esperado a la hora de presionar el botón con carga alta.\par
+Ahora, la siguiente prueba que se realizó fue la sincronización de los tiempos con los LEDs correspondientes para las 4 etapas de la lavadora. Esto por medio de una máquina de estados para realizar cada transición tal como se muestra en la figura \ref{fig15}.
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=.7\linewidth]{Imagenes/9.png}
+        \caption{Transición de estados de la lavadora.}
+        \label{fig15}
+    \end{figure}
+Hecho lo anterior, es posible ya mostrar el diseño completo del circuito que simula el comportamiento de una lavadora.
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=.7\linewidth]{Imagenes/10.png}
+        \caption{Diseño del circuito completo.}
+        \label{fig16}
+    \end{figure}
+La programación de las funciones que hicieron este comportamiento posible se explicarán en la sección de resultados por medio de diagramas e imágenes.
 
 
 
