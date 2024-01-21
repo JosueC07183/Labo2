@@ -105,8 +105,18 @@ La descripción de los registros e instrucciones utilizados son los siguientes:
     
 \end{itemize}
 
-\subsection*{Lista de componentes}
+\subsection*{Componentes electrónicos complementarios}
+\subsubsection*{Decodificador BCD}
+BCD (Decimal Codificado en Binario) es un código que representa valores decimales en formato binario, para ello forma grupos de 4 bits para representar cada valor del 0 al 9. El 9 es el valor máximo que se puede representar en un dígito decimal \cite{web2}. Lo anterior justifica el hecho de usar dos display de 7 segmentos, al tener 2 de estos componentes es necesario usar dos convertidores ya que se necesita optimizar la cantidad de pines del MCU \texttt{ATtiny4313}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.5\linewidth]{Imagenes/4.png}
+        \caption{Conexión de los displays con el ATtiny4313. Tomado de \cite{web}.}
+        \label{fig10}
+    \end{figure}
 
+\subsection*{Lista de componentes}
+En la tabla \ref{table_2} resume el equipo electrónico a usar para este laboratorio.
 \begin{table}[H]
 \caption{Lista de equipos}
 \label{table_2}
@@ -115,8 +125,14 @@ La descripción de los registros e instrucciones utilizados son los siguientes:
 \hline
 \textbf{Componente}&\textbf{Cantidad}&\textbf{Precio}\\
  \hline
-- &-  &- \\  
--& - &- \\ \hline
+ATtiny4313 &1  & 1.3\$ \\  
+Resistencias & - &- \\ \hline
+Capacitores & - &- \\ \hline
+LED 7 segmentos& 2 &- \\ \hline
+Switches & - &- \\ \hline
+Resistencias & - &- \\ \hline
+LEDs& - &- \\ \hline
+Convertidores Bcd-7S& - &- \\ \hline
  \textbf{Total}& &  \\
  \hline
 \end{tabular}
@@ -124,5 +140,72 @@ La descripción de los registros e instrucciones utilizados son los siguientes:
 \end{table}
 
 \subsection*{Diseño del circuito}
+
+Al tratarse de una lavadora compuesta de máquina de estados, el diseño del circuito se fue realizando por etapas. No obstante, la lógica de la electrónica fue posible armarla con los conocimientos adquiridos del primer laboratorio. El esquemático base para la lavadora automática es el siguiente:
+ \input{sch1.tex}
+Del esquemático \ref{FigWW}, es claro notar que el circuito general se compone de varias etapas. Así, es importante saber el uso de las interrupciones para realizar una tarea tan simple como encender o apagar un LED, por ese motivo, hay que consultar la hoja del fabricante del MCU para tener más detalles de los pines para programar la interrupción, además habilitarlos para que sirvan como salida o entrada dependiendo de la conexión hecha previamente. El ejemplo de la figura \ref{fig11},
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.7\linewidth]{Imagenes/5.1.png}
+        \caption{Encendido de un LED.}
+        \label{fig11}
+    \end{figure}
+se muestra que el pin B0, es una entrada para este caso, y esto indica que ocupará habilitar la resistencia de pull-up con el enmáscarado \texttt{GIMSK}. Por su parte, el pin B4 se trata de una salida, entonces basta con hacer uso de \texttt{DDRB=0b00010000}, para que el programa entienda que es una salida. De esa manera, presionando el botón, es posible encender el led adecuadamente.\par
+La anterior fue de gran importancia para entender el comportamiento de las interrupciones y todo lo necesario para hacer que éstas trabajen adecuadamente. Por lo que una de las primeras etapas realizadas para este laboratorio fue encender LEDs por medio de botones haciendo uso de interrupciones.
+\begin{figure}[H]
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=.7\linewidth]{Imagenes/6.png}
+     \caption{Carga media}\label{F12}
+   \end{minipage}\hfill
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=.7\linewidth]{Imagenes/7.png}
+     \caption{Indicador de carga media }\label{F13}
+   \end{minipage}
+\end{figure}
+Primero se presiona el botón, donde es claro notar el flujo de corriente esperado que por medio de una interrupción le llegará al LED de carga media, y de manera inmediata es posible ver que el LED se enciende tal como se esperaba. Además, note que le está llegando una alimentación de \SI{5}{\volt}, lo que es una tensión eléctrica adecuada para que este componente no se dañe. Esta prueba se realizó con todos los demás LEDs. \par
+Ahora, la segunda etapa consistió en mostrar en los displays de segmentos de la figura \ref{fig10} con los tiempos totales de cada carga que se le vaya asignar a la lavadora. Esto consiste en programar una cuenta regresiva haciendo uso de los pines B, los cuales están configurados como salida y así mostrar el respectivo número definido previamente en el código. Entonces, al presionar cualquiera de los 3 botones los display mostrarán el total del tiempo para cada carga tal como se muestra a continuación:
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=.7\linewidth]{Imagenes/8.png}
+        \caption{Encendido de un LED con cuenta regresiva.}
+        \label{fig14}
+    \end{figure}
+Lo primero a resaltar es que la corriente eléctrica que le está llegando a los displays es la adecuada, ya que no supera los \SI{0.02}{\A}, así como al LED. Luego, el uso de las interrupciones para este caso (y los demás) presentan el resultado esperado a la hora de presionar el botón con carga alta.\par
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \newpage
