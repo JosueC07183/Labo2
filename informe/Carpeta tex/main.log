@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  21 JAN 2024 18:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  21 JAN 2024 19:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1393,23 +1393,24 @@ name{figure.33}) has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.85 \end{itemize}
                    <./Imagenes/17.png> <./Imagenes/18.png> <./Imagenes/19.png>]
-) (./Conclusiones_recomendaciones.tex) [21pdfTeX warning (ext4): destination wi
-th the same identifier (name{figure.34}) has been already used, duplicate ignor
-ed
+) (./Conclusiones_recomendaciones.tex [21pdfTeX warning (ext4): destination wit
+h the same identifier (name{figure.34}) has been already used, duplicate ignore
+d
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.59 \newpage
-              <./Imagenes/20.png>] (./6_Bibliografia.tex (./main.bbl
+l.7 \item R
+           evisar las configuraciones de las interrupciones, porque es posib...
+ <./Imagenes/20.png>]) [22] (./6_Bibliografia.tex (./main.bbl
 Underfull \hbox (badness 3439) in paragraph at lines 4--10
 []\OT1/cmr/m/n/12 Atmel.  Fea-tu-res at-tiny2313a/attiny4313.  At-mel, [][]$\OT
 1/cmtt/m/n/12 https : / / ww1 . microchip . com /
  []
 
-) [22]) (./Apendices.tex
+) [23]) (./Apendices.tex
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Documentos/ATtiny2313.pdf): PDF inclu
 sion: found PDF version <1.6>, but at most version <1.5> allowed
-<./Documentos/ATtiny2313.pdf, id=342, 614.295pt x 794.97pt>
+<./Documentos/ATtiny2313.pdf, id=347, 614.295pt x 794.97pt>
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
 <use ./Documentos/ATtiny2313.pdf>
 Package pdftex.def Info: ./Documentos/ATtiny2313.pdf  used on input line 5.
@@ -1430,7 +1431,7 @@ sion: found PDF version <1.6>, but at most version <1.5> allowed
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Documentos/ATtiny2313.pdf): PDF inclu
 sion: found PDF version <1.6>, but at most version <1.5> allowed
-<./Documentos/ATtiny2313.pdf, id=345, page=1, 614.295pt x 794.97pt>
+<./Documentos/ATtiny2313.pdf, id=350, page=1, 614.295pt x 794.97pt>
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
 <use ./Documentos/ATtiny2313.pdf, page 1>
 Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page1 used on input line
@@ -1441,7 +1442,7 @@ File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page1 used on input line
  5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-[23]
+[24]
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
 <use ./Documentos/ATtiny2313.pdf, page 1>
 Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page1 used on input line
@@ -1457,7 +1458,7 @@ File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page1 used on input line
  5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [24 <./Documentos/ATtiny2313.pdf>]
+ [25 <./Documentos/ATtiny2313.pdf>]
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
 <use ./Documentos/ATtiny2313.pdf>
 Package pdftex.def Info: ./Documentos/ATtiny2313.pdf  used on input line 5.
@@ -1478,7 +1479,7 @@ sion: found PDF version <1.6>, but at most version <1.5> allowed
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Documentos/ATtiny2313.pdf): PDF inclu
 sion: found PDF version <1.6>, but at most version <1.5> allowed
-<./Documentos/ATtiny2313.pdf, id=382, page=2, 614.295pt x 794.97pt>
+<./Documentos/ATtiny2313.pdf, id=387, page=2, 614.295pt x 794.97pt>
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
 <use ./Documentos/ATtiny2313.pdf, page 2>
 Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page2 used on input line
@@ -1502,53 +1503,6 @@ Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page2 used on input line
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
 <use ./Documentos/ATtiny2313.pdf, page 2>
 Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page2 used on input line
- 5.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-[25 <./Documentos/ATtiny2313.pdf>]
-File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf  used on input line 5.
-(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-
-
-pdfTeX warning: /usr/bin/pdflatex (file ./Documentos/ATtiny2313.pdf): PDF inclu
-sion: found PDF version <1.6>, but at most version <1.5> allowed
-File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf  used on input line 5.
-(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-
-
-pdfTeX warning: /usr/bin/pdflatex (file ./Documentos/ATtiny2313.pdf): PDF inclu
-sion: found PDF version <1.6>, but at most version <1.5> allowed
-
-
-pdfTeX warning: /usr/bin/pdflatex (file ./Documentos/ATtiny2313.pdf): PDF inclu
-sion: found PDF version <1.6>, but at most version <1.5> allowed
-<./Documentos/ATtiny2313.pdf, id=401, page=3, 614.295pt x 794.97pt>
-File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 3>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page3 used on input line
- 5.
-(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 3>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page3 used on input line
- 5.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 3>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page3 used on input line
- 5.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 3>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page3 used on input line
- 5.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 3>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page3 used on input line
  5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 [26 <./Documentos/ATtiny2313.pdf>]
@@ -1572,30 +1526,30 @@ sion: found PDF version <1.6>, but at most version <1.5> allowed
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Documentos/ATtiny2313.pdf): PDF inclu
 sion: found PDF version <1.6>, but at most version <1.5> allowed
-<./Documentos/ATtiny2313.pdf, id=412, page=4, 614.295pt x 794.97pt>
+<./Documentos/ATtiny2313.pdf, id=406, page=3, 614.295pt x 794.97pt>
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 4>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page4 used on input line
+<use ./Documentos/ATtiny2313.pdf, page 3>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page3 used on input line
  5.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 4>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page4 used on input line
+<use ./Documentos/ATtiny2313.pdf, page 3>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page3 used on input line
  5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 4>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page4 used on input line
+<use ./Documentos/ATtiny2313.pdf, page 3>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page3 used on input line
  5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 4>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page4 used on input line
+<use ./Documentos/ATtiny2313.pdf, page 3>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page3 used on input line
  5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 4>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page4 used on input line
+<use ./Documentos/ATtiny2313.pdf, page 3>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page3 used on input line
  5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 [27 <./Documentos/ATtiny2313.pdf>]
@@ -1619,30 +1573,30 @@ sion: found PDF version <1.6>, but at most version <1.5> allowed
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Documentos/ATtiny2313.pdf): PDF inclu
 sion: found PDF version <1.6>, but at most version <1.5> allowed
-<./Documentos/ATtiny2313.pdf, id=424, page=5, 614.295pt x 794.97pt>
+<./Documentos/ATtiny2313.pdf, id=418, page=4, 614.295pt x 794.97pt>
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 5>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page5 used on input line
+<use ./Documentos/ATtiny2313.pdf, page 4>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page4 used on input line
  5.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 5>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page5 used on input line
+<use ./Documentos/ATtiny2313.pdf, page 4>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page4 used on input line
  5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 5>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page5 used on input line
+<use ./Documentos/ATtiny2313.pdf, page 4>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page4 used on input line
  5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 5>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page5 used on input line
+<use ./Documentos/ATtiny2313.pdf, page 4>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page4 used on input line
  5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 5>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page5 used on input line
+<use ./Documentos/ATtiny2313.pdf, page 4>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page4 used on input line
  5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 [28 <./Documentos/ATtiny2313.pdf>]
@@ -1666,7 +1620,54 @@ sion: found PDF version <1.6>, but at most version <1.5> allowed
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Documentos/ATtiny2313.pdf): PDF inclu
 sion: found PDF version <1.6>, but at most version <1.5> allowed
-<./Documentos/ATtiny2313.pdf, id=437, page=62, 614.295pt x 794.97pt>
+<./Documentos/ATtiny2313.pdf, id=429, page=5, 614.295pt x 794.97pt>
+File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
+<use ./Documentos/ATtiny2313.pdf, page 5>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page5 used on input line
+ 5.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
+<use ./Documentos/ATtiny2313.pdf, page 5>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page5 used on input line
+ 5.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
+<use ./Documentos/ATtiny2313.pdf, page 5>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page5 used on input line
+ 5.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
+<use ./Documentos/ATtiny2313.pdf, page 5>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page5 used on input line
+ 5.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
+<use ./Documentos/ATtiny2313.pdf, page 5>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page5 used on input line
+ 5.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+[29 <./Documentos/ATtiny2313.pdf>]
+File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
+<use ./Documentos/ATtiny2313.pdf>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf  used on input line 5.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Documentos/ATtiny2313.pdf): PDF inclu
+sion: found PDF version <1.6>, but at most version <1.5> allowed
+File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
+<use ./Documentos/ATtiny2313.pdf>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf  used on input line 5.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Documentos/ATtiny2313.pdf): PDF inclu
+sion: found PDF version <1.6>, but at most version <1.5> allowed
+
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Documentos/ATtiny2313.pdf): PDF inclu
+sion: found PDF version <1.6>, but at most version <1.5> allowed
+<./Documentos/ATtiny2313.pdf, id=442, page=62, 614.295pt x 794.97pt>
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
 <use ./Documentos/ATtiny2313.pdf, page 62>
 Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page62 used on input lin
@@ -1690,130 +1691,130 @@ e 5.
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
 <use ./Documentos/ATtiny2313.pdf, page 62>
 Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page62 used on input lin
-e 5.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-[29 <./Documentos/ATtiny2313.pdf>]
-
-pdfTeX warning: /usr/bin/pdflatex (file ./Documentos/ATtiny2313.pdf): PDF inclu
-sion: found PDF version <1.6>, but at most version <1.5> allowed
-<./Documentos/ATtiny2313.pdf, id=446, page=63, 614.295pt x 794.97pt>
-File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 63>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page63 used on input lin
-e 5.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 63>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page63 used on input lin
-e 5.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 63>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page63 used on input lin
 e 5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 [30 <./Documentos/ATtiny2313.pdf>]
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Documentos/ATtiny2313.pdf): PDF inclu
 sion: found PDF version <1.6>, but at most version <1.5> allowed
-<./Documentos/ATtiny2313.pdf, id=456, page=64, 614.295pt x 794.97pt>
+<./Documentos/ATtiny2313.pdf, id=452, page=63, 614.295pt x 794.97pt>
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 64>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page64 used on input lin
+<use ./Documentos/ATtiny2313.pdf, page 63>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page63 used on input lin
 e 5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 64>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page64 used on input lin
+<use ./Documentos/ATtiny2313.pdf, page 63>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page63 used on input lin
 e 5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 64>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page64 used on input lin
+<use ./Documentos/ATtiny2313.pdf, page 63>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page63 used on input lin
 e 5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 [31 <./Documentos/ATtiny2313.pdf>]
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Documentos/ATtiny2313.pdf): PDF inclu
 sion: found PDF version <1.6>, but at most version <1.5> allowed
-<./Documentos/ATtiny2313.pdf, id=465, page=65, 614.295pt x 794.97pt>
+<./Documentos/ATtiny2313.pdf, id=461, page=64, 614.295pt x 794.97pt>
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 65>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page65 used on input lin
+<use ./Documentos/ATtiny2313.pdf, page 64>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page64 used on input lin
 e 5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 65>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page65 used on input lin
+<use ./Documentos/ATtiny2313.pdf, page 64>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page64 used on input lin
 e 5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 65>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page65 used on input lin
+<use ./Documentos/ATtiny2313.pdf, page 64>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page64 used on input lin
 e 5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 [32 <./Documentos/ATtiny2313.pdf>]
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Documentos/ATtiny2313.pdf): PDF inclu
 sion: found PDF version <1.6>, but at most version <1.5> allowed
-<./Documentos/ATtiny2313.pdf, id=474, page=66, 614.295pt x 794.97pt>
+<./Documentos/ATtiny2313.pdf, id=470, page=65, 614.295pt x 794.97pt>
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 66>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page66 used on input lin
+<use ./Documentos/ATtiny2313.pdf, page 65>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page65 used on input lin
 e 5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 66>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page66 used on input lin
+<use ./Documentos/ATtiny2313.pdf, page 65>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page65 used on input lin
 e 5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 66>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page66 used on input lin
+<use ./Documentos/ATtiny2313.pdf, page 65>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page65 used on input lin
 e 5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 [33 <./Documentos/ATtiny2313.pdf>]
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Documentos/ATtiny2313.pdf): PDF inclu
 sion: found PDF version <1.6>, but at most version <1.5> allowed
-<./Documentos/ATtiny2313.pdf, id=484, page=67, 614.295pt x 794.97pt>
+<./Documentos/ATtiny2313.pdf, id=480, page=66, 614.295pt x 794.97pt>
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 67>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page67 used on input lin
+<use ./Documentos/ATtiny2313.pdf, page 66>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page66 used on input lin
 e 5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 67>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page67 used on input lin
+<use ./Documentos/ATtiny2313.pdf, page 66>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page66 used on input lin
 e 5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 67>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page67 used on input lin
+<use ./Documentos/ATtiny2313.pdf, page 66>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page66 used on input lin
 e 5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 [34 <./Documentos/ATtiny2313.pdf>]
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Documentos/ATtiny2313.pdf): PDF inclu
 sion: found PDF version <1.6>, but at most version <1.5> allowed
-<./Documentos/ATtiny2313.pdf, id=493, page=68, 614.295pt x 794.97pt>
+<./Documentos/ATtiny2313.pdf, id=489, page=67, 614.295pt x 794.97pt>
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 68>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page68 used on input lin
+<use ./Documentos/ATtiny2313.pdf, page 67>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page67 used on input lin
 e 5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 68>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page68 used on input lin
+<use ./Documentos/ATtiny2313.pdf, page 67>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page67 used on input lin
 e 5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
-<use ./Documentos/ATtiny2313.pdf, page 68>
-Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page68 used on input lin
+<use ./Documentos/ATtiny2313.pdf, page 67>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page67 used on input lin
 e 5.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 [35 <./Documentos/ATtiny2313.pdf>]
-<./Documentos/74LS139 Datasheet.pdf, id=502, 614.295pt x 794.97pt>
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Documentos/ATtiny2313.pdf): PDF inclu
+sion: found PDF version <1.6>, but at most version <1.5> allowed
+<./Documentos/ATtiny2313.pdf, id=498, page=68, 614.295pt x 794.97pt>
+File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
+<use ./Documentos/ATtiny2313.pdf, page 68>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page68 used on input lin
+e 5.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
+<use ./Documentos/ATtiny2313.pdf, page 68>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page68 used on input lin
+e 5.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ./Documentos/ATtiny2313.pdf Graphic file (type pdf)
+<use ./Documentos/ATtiny2313.pdf, page 68>
+Package pdftex.def Info: ./Documentos/ATtiny2313.pdf , page68 used on input lin
+e 5.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+[36 <./Documentos/ATtiny2313.pdf>]
+<./Documentos/74LS139 Datasheet.pdf, id=507, 614.295pt x 794.97pt>
 File: ./Documentos/74LS139 Datasheet.pdf Graphic file (type pdf)
 <use ./Documentos/74LS139 Datasheet.pdf>
 Package pdftex.def Info: ./Documentos/74LS139 Datasheet.pdf  used on input line
@@ -1824,7 +1825,7 @@ File: ./Documentos/74LS139 Datasheet.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./Documentos/74LS139 Datasheet.pdf  used on input line
  8.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-<./Documentos/74LS139 Datasheet.pdf, id=505, page=1, 614.295pt x 794.97pt>
+<./Documentos/74LS139 Datasheet.pdf, id=510, page=1, 614.295pt x 794.97pt>
 File: ./Documentos/74LS139 Datasheet.pdf Graphic file (type pdf)
 <use ./Documentos/74LS139 Datasheet.pdf, page 1>
 Package pdftex.def Info: ./Documentos/74LS139 Datasheet.pdf , page1 used on inp
@@ -1850,7 +1851,7 @@ File: ./Documentos/74LS139 Datasheet.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./Documentos/74LS139 Datasheet.pdf , page1 used on inp
 ut line 8.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [36 <./Documentos/74LS139 Datasheet.pdf>])
+ [37 <./Documentos/74LS139 Datasheet.pdf>])
 (./main.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
@@ -1865,13 +1866,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 7DA525D5F85B1CD59288B7EEECE73ECF;600.
  ) 
 Here is how much of TeX's memory you used:
- 42518 strings out of 478287
- 994245 string characters out of 5849289
+ 42519 strings out of 478287
+ 994252 string characters out of 5849289
  1495500 words of memory out of 5000000
  60005 multiletter control sequences out of 15000+600000
  479129 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,17n,103p,1469b,1011s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,17n,103p,2048b,1011s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-di
@@ -1879,13 +1880,14 @@ st/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
-msam10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (40 pages, 1496311 bytes).
+nts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.p
+fb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on main.pdf (41 pages, 1507646 bytes).
 PDF statistics:
- 593 PDF objects out of 1000 (max. 8388607)
- 416 compressed objects within 5 object streams
- 118 named destinations out of 1000 (max. 500000)
+ 602 PDF objects out of 1000 (max. 8388607)
+ 422 compressed objects within 5 object streams
+ 119 named destinations out of 1000 (max. 500000)
  343 words of extra memory for PDF output out of 10000 (max. 10000000)
 
