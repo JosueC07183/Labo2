@@ -14,13 +14,12 @@
 
 // Duraciones de cargas inciales
 #define baja    9
-#define media   19
-#define alta    27
+#define media   16
+#define alta    21
 
 // Variable que guarda el valor inicial del tiempo
 volatile int tiempo_inicio = 0;
 volatile int segundos = 0;
-volatile int pausa = 0;
 volatile uint8_t unidades;
 volatile uint8_t decenas;
 
@@ -66,12 +65,12 @@ void estados() {
                 // Lavar, 01
                 PORTA |= (1 << PA0);
             }
-            else if (4 < segundos && segundos < 7) {
+            else if (4 <= segundos && segundos < 6) {
                 // Enjuagar, 10
                 PORTA &= ~(1 << PA0);
                 PORTA |= (1 << PA1);
             }
-            else if (7 <= segundos && segundos < tiempo_inicio) {
+            else if (6 <= segundos && segundos < tiempo_inicio) {
                 // Enjuagar, 11
                 PORTA |= (1 << PA0);
             }
@@ -84,16 +83,16 @@ void estados() {
                 // Suministro, 00
                 PORTA &= ~(1 << PA2); // Encender leds de estado suministro
             }
-            else if (2 <= segundos && segundos < 8) {
+            else if (2 <= segundos && segundos < 7) {
                 // Lavar, 01
                 PORTA |= (1 << PA0);
             }
-            else if (8 <= segundos && segundos < 13) {
+            else if (7 <= segundos && segundos < 11) {
                 // Enjuagar, 10
                 PORTA &= ~(1 << PA0);
                 PORTA |= (1 << PA1);
             }
-            else if (13 <= segundos && segundos < tiempo_inicio) {
+            else if (11 <= segundos && segundos < tiempo_inicio) {
                 // Enjuagar, 11
                 PORTA |= (1 << PA0);
             }
@@ -106,16 +105,16 @@ void estados() {
                 // Suministro, 00
                 PORTA &= ~(1 << PA2); // Encender leds de estado suministro
             }
-            else if (3 <= segundos && segundos < 13) {
+            else if (3 <= segundos && segundos < 10) {
                 // Lavar, 01
                 PORTA |= (1 << PA0);
             }
-            else if (14 <= segundos && segundos < 19) {
+            else if (10 <= segundos && segundos < 15) {
                 // Enjuagar, 10
                 PORTA &= ~(1 << PA0);
                 PORTA |= (1 << PA1);
             }
-            else if (19 <= segundos && segundos < tiempo_inicio) {
+            else if (15 <= segundos && segundos < tiempo_inicio) {
                 // Enjuagar, 11
                 PORTA |= (1 << PA0);
             }
@@ -154,14 +153,12 @@ void init() {
     DDRB = 0xff; // Todos los pines del puerto B como salidas
     DDRD = 0x70; // D6, D5, D4 como salidas y D0, D1, D2, D3 como entradas
     DDRA = 0x07; // A0, A1, A2 como salidas
+    
     PORTA |= (1 << PA2); // Iniciar PA2 en alto (LEDs de estado apagados)
-
 
     // Esto se usa para aplicar una mascara para habilitar interrupcion solo por un pin a la vez porque se pueden
     // habilitar interrupciones por puerto
     PCMSK2 |= (1 << PCINT12); // PD1, baja
-    //PCMSK2 |= (1 << PCINT13); // PD2, media, creo que no se ocupa porque int0 es interrupcion individual
-    //PCMSK2 |= (1 << PCINT14); // PD3, alta
 
     // REV, FALTA METER EL DE PAUSE
     GIMSK |= (1 << PCIE2); // Habilitar interrupciones por PD1/PCINT12, baja (PCIE2 cubre del 17-11)
@@ -243,4 +240,3 @@ int main(void) {
     }
     return 0;
 }
-
