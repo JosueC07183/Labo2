@@ -154,16 +154,9 @@ void init() {
     DDRB = 0xff; // Todos los pines del puerto B como salidas
     DDRD = 0x70; // D6, D5, D4 como salidas y D0, D1, D2, D3 como entradas
     DDRA = 0x07; // A0, A1, A2 como salidas
+    
     PORTA |= (1 << PA2); // Iniciar PA2 en alto (LEDs de estado apagados)
 
-
-    // Esto se usa para aplicar una mascara para habilitar interrupcion solo por un pin a la vez porque se pueden
-    // habilitar interrupciones por puerto
-    PCMSK2 |= (1 << PCINT12); // PD1, baja
-    //PCMSK2 |= (1 << PCINT13); // PD2, media, creo que no se ocupa porque int0 es interrupcion individual
-    //PCMSK2 |= (1 << PCINT14); // PD3, alta
-
-    // REV, FALTA METER EL DE PAUSE
     GIMSK |= (1 << PCIE2); // Habilitar interrupciones por PD1/PCINT12, baja (PCIE2 cubre del 17-11)
     GIMSK |= (1 << INT0); // Habilitar interrupciones por PD2, media
     GIMSK |= (1 << INT1); // Habilitar interrupciones por PD3, alta
