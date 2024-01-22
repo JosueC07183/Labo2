@@ -12,6 +12,15 @@
 #include <util/delay.h>
 #include <avr/interrupt.h>
 
+/**
+ * @brief Aquí se definen las cargas iniciales que se le podrán añadir a la lavadora, 9, 19 y 27 para baja, media y alta respectivamente. Se tiene el prototipo de la máquina de estados.
+ * @param tiempo_inicio: esto es una variable inicial del tiempo.
+ * @param segundos: esta variable se encarga de revisar la cantidad de tiempo que queda en el display, se coloca en el intervalo de tiempo y valora si se debe pasar al siguiente estado.
+ * @param unidades: es la unidad del posible dígito de dos números que se vaya a formar.
+ * @param decenas: muestra las decenas en el display.
+ */
+
+
 // Duraciones de cargas inciales
 #define baja    9
 #define media   16
@@ -24,6 +33,13 @@ volatile uint8_t unidades;
 volatile uint8_t decenas;
 
 void estados();
+
+/**
+ * @brief Esta función se encarga de mostrar los LEDs que se encienden cuando se presiona cualquiera de los 3 botones.
+ * @param PD4: corresponde al LED de la carga alta.
+ * @param PD5: corresponde al LED de la carga media.
+ * @param PD6: corresponde al LED de la carga baja.
+ */
 
 // Funcion para encender leds de carga
 void led_carga() {
@@ -41,7 +57,9 @@ void led_carga() {
     }
 }
 
-// Funcion para apagar leds basado en criterios
+/**
+ * @brief Esta función apaga todos los LEDs una vez que se termine el lavado de una carga.
+ */
 void led_off() {
     // Apagar leds de carga
     if (tiempo_inicio == 0) {
@@ -52,7 +70,17 @@ void led_off() {
     }
 }
 
-// Funcion encargada de encender los LEDs dependiendo del estado en el que se encuentre
+/**
+ * @brief Esta función es la máquina de estados que se encargá de intercambiar los estados de la lavadora una vez que se encuentre operando,
+ * es decir, pasará de suministro, lavar, enjuagar, centrifugar, una vez que termine el contador, se hace un llamada a la función led_off() para
+ * apagar todos los LEDs.
+ * @param PA2: poner en bajo este pin hace que la simulación no inicie con el led de suministro encendido.
+ * @param PAO: LED del demultiplexor.
+ * @param PA1: LED del demultiplexor.
+ * @param segundos: tiempo asginado para cada carga.
+ * 
+ */
+
 void estados() {
     switch (tiempo_inicio) {
         // Carga baja
@@ -123,7 +151,12 @@ void estados() {
     }
 } 
 
-// Funcion encargada de mostrar el conteo en los displays
+/**
+ * @brief Esta función es la encargada de mostrar el conteo en los displays, que por medio de un condicional separa las unidades y decenas de un número. Luego, por medio de un pipe se toman los 4
+ * bits LSB para colocar las unidades, y otro (con shift) para las decenas. Luego, se hace un reinicio de las variables, las cuales quedan en cero.
+ * @param tiempo: variable que se muestra en los displays.
+ * @param segundos: variable que se encarga en el cambio de estado.
+ */
 void display(volatile int tiempo) {
     tiempo = tiempo - segundos;
     if (tiempo_inicio != 0) {
@@ -147,7 +180,12 @@ void display(volatile int tiempo) {
     }
 }
 
-// Inicializar pines
+/**
+ * @brief Esta es la parte más importante del circuito, la configuración de los pines para clasificarlos como salidas, entradas, habilitación de interrupciones por medio de máscaras
+ * Y la parte de temporizadores donde se usan los registros vistos en clase para poder hacer uso de los timers, CTC, así con sus respectivas interrupciones, lo que permite refrescar los
+ * displays correctamente. 
+ * 
+ */
 void init() {
     ////////////// Salidas, se ocupan 4, 1 para el selector y los otros 3 para mostrar numeros del 0-9
     DDRB = 0xff; // Todos los pines del puerto B como salidas
@@ -217,7 +255,12 @@ ISR(INT1_vect) {
 ISR(TIMER0_COMPA_vect) {
     display(tiempo_inicio);
 }
-
+/**
+ * @brief Construct a new ISR object, acá se resumen las interrupciones usadas para este trabajo, ellas corresponden a cada botón y hacen llamado
+ * a una función para que se ejecute en las declaraciones void, y así se cumple con el requisito de que sean simples y claras. También están las
+ * interrupciones de los timers, esto para refrescar los displays cada 0.003 segundos.
+ * 
+ */
 // Entra aqui cada 1 segundos
 ISR(TIMER1_COMPA_vect) {
     if (tiempo_inicio == 0)
@@ -231,6 +274,10 @@ ISR(TIMER1_COMPA_vect) {
     estados(); // Revisar por cambios de los estados cada segundo
 }
 
+/**
+ * @brief Main de todo el código, donde basta con hacer un llamado de la configuración inicial y así ver el funcionamiento de la lavadora.
+ * @return int 
+ */
 int main(void) {
     // Inicializar
     init();
