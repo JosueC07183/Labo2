@@ -9,14 +9,27 @@
 \contentsline {figure}{\numberline {8}{\ignorespaces Registro de control de Timer/Counter. Tomado de \cite {web}.}}{6}{figure.8}%
 \contentsline {figure}{\numberline {9}{\ignorespaces Registro de comparación de salida A. Tomado de \cite {web}.}}{6}{figure.9}%
 \contentsline {figure}{\numberline {10}{\ignorespaces Conexión de los displays con el ATtiny4313. Tomado de \cite {web}.}}{7}{figure.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Esquemático general}}{8}{figure.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Encendido de un LED.}}{8}{figure.12}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Carga media}}{9}{figure.13}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Indicador de carga media }}{9}{figure.14}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Encendido de un LED con cuenta regresiva.}}{10}{figure.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Transición de estados de la lavadora.}}{11}{figure.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Diseño del circuito completo.}}{11}{figure.17}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Diagrama de flujo función led\_carga.}}{12}{figure.18}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Máquina de estados transición de LEDs.}}{13}{figure.19}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Conituación máquina de estados transición de LEDs.}}{14}{figure.20}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Función display}}{15}{figure.21}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Botones. Tomado de \cite {web3}.}}{7}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces LEDs. Tomado de \cite {web3}.}}{7}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Demultiplexor. Tomado de \cite {web3}.}}{8}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Esquemático general}}{9}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Encendido de un LED.}}{9}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Carga media}}{10}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Indicador de carga media }}{10}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Encendido de un LED con cuenta regresiva.}}{11}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Transición de estados de la lavadora.}}{12}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Diseño del circuito completo.}}{12}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Diagrama de flujo función led\_carga.}}{14}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Máquina de estados transición de LEDs.}}{15}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Conituación máquina de estados transición de LEDs.}}{16}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Función display}}{17}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Carga baja lavándose.}}{17}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Carga baja lavándose parte 2. }}{17}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Estado suministro, carga media.}}{18}{figure.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Estado lavar, carga media.}}{18}{figure.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Estado enjuagar, carga media.}}{19}{figure.29}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Estado centrifugar, carga media.}}{19}{figure.30}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Estado suministro, carga alta.}}{20}{figure.31}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Estado lavar, carga alta.}}{20}{figure.32}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Estado enjuague, carga alta.}}{20}{figure.33}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Estado centrifugar, carga alta.}}{21}{figure.34}%

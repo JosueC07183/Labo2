@@ -7,7 +7,83 @@ El diagrama anterior permite encender los LEDs con respecto al tiempo ya asignad
 \input{sch3.1.tex}
 Esta máquina de estados se encarga de administrar los tiempos para cada carga, por lo que se define un intervalo de tiempo para cada etapa, esto con base al tiempo ya establecido. Entonces, una vez que se cumple cada desigualdad, se apaga el LED actual y se enciende el siguiente LED con el estado correspondiente. Esto para cada situación, dependiendo de la carga que se le asigne a la lavadora. Ahora, hay dos detalles en esta máquina de estados, lo primero es que para referescar los LEDs se hace uso de la interrupción \texttt{TIMER0\_COMPA\_vect} y esto con base al tiempo asignado, esto permite también llevar una cuenta de los segundos que pasan. Claramente hay que hacer las configuraciones para lograr esto, lo primero es con  \texttt{TCCR0A} y la macro \texttt{WGM12}, luego la variable \texttt{OCR1A} para obtener un 1 segundo, el prescaler de 256 y habilitar la interrupción. Esta interrupción se compone de una función: \texttt{display}, la cual es encargada de mostrar la cuenta regresiva de los números mostrados en los displays, el diagrama de flujo de esta función se muestra a continuación,
 \input{sch4.tex}
-de donde primero se define la varible como la resta de esta misma variable con segundos, luego con ayuda de condicional se comprueba que el tiempo de carga no sea 0 para poder separar unidades y decenas del número, así, se toman los 4 bits LSB y se colocan en las unidades, mientras que los 4 bits MSB en las decenas, se muestran los ceros y finalmente se reinician las variables a 0.
+de donde primero se define la varible como la resta de esta misma variable con segundos, luego con ayuda de condicional se comprueba que el tiempo de carga no sea 0 para poder separar unidades y decenas del número, así, se toman los 4 bits LSB y se colocan en las unidades, mientras que los 4 bits MSB en las decenas, se muestran los ceros y finalmente se reinician las variables a 0. Lo segundo es que se muestra la función: \texttt{led\_off} que se encarga de limpiar los puertos donde están conectados las cargas y los estados, en otras palabras apaga los LEDs que indican el comportamiento actual de la lavadora.\par
+Ya con todo lo realizado al momento, es pertinente ver el funcionamiento general de la lavadora. Se mostrará el funcionamiento de ésta a partir de los 3 puntos de carga, y observar la transición de estados por medio de la cuenta regresiva de los displays.\par
+Para la carga baja, al igual que las otras se conectaron algunos medidores de voltaje y osciloscopios para comprobar que la corriente eléctrica es la adecuada, y demostrar que los LEDs se comportan tal como se esperaba.
+\begin{figure}[H]
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=.7\linewidth]{Imagenes/11.png}
+     \caption{Carga baja lavándose.}\label{F17}
+   \end{minipage}\hfill
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=.7\linewidth]{Imagenes/12.png}
+     \caption{Carga baja lavándose parte 2. }\label{F18}
+   \end{minipage}
+\end{figure}
+Al presionar el botón bajo, note que el fluido de corriente se va para el pin D6, y las combinaciones de los displays se envía a las etiquetas S0 y S1, que cambiarán conforme avancen los estados. También, en el osciloscopio conectado en la sección de nivel de carga, note que la señal de LEDBajo se mantiene en alto, mientras que las demás en bajo. Luego, en el siguiente osciloscopio, se muestra la cuenta regresiva del estado de suministro, la cual es de 1 segundo, de manera inmediata se tiene el estado de lavar que toma 3 segundos, para el estado de lavar, luego el siguiente estado de enjuagar que toma 2 segundos, y esto es consistente con el tiempo que le pertenece al estado de centrifugar, o sea, 3 segundos y con esto concluye el comportamiento de la carga baja. El otro detalle es que las magnitudes de las tensiones no superaron los valores máximos de los componentes electrónicos, por tanto, están seguros y no tendrán ningún daño.\par
+
+Para cuando se presiona el botón de carga media, se obtiene el mismo comportamiento anterior, con la diferencia en los tiempos de cada estado de la lavadora. Se inicia con el estado de suministro, que debe durar 2 segundos, tanto el LED como la señal del osciloscopio se mantienen en alto y tensión eléctrica presente en el pin D5 es la adecuada para un buen funcionamiento, además, las interrupciones para que este evento sea acertado fueron ya establecidas. 
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=.7\linewidth]{Imagenes/14.png}
+        \caption{Estado suministro, carga media.}
+        \label{fig19}
+    \end{figure}
+Ahora, gracias a la máquina de estados programada es posible observar el siguiente estado: lavar, 
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=.7\linewidth]{Imagenes/14.1.png}
+        \caption{Estado lavar, carga media.}
+        \label{fig20}
+    \end{figure}
+dicha máquina es la que decide si pasar o no a un estado al otro por medio de un intervalo de tiempo ya establecido , así para cada uno de los estados de lavado. Para la etapa de enjuague se tiene la cuenta correctamente, es decir, dura los 4 segundos y las tensiones eléctricas funcionan apropiadamente.
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=.7\linewidth]{Imagenes/15.png}
+        \caption{Estado enjuagar, carga media.}
+        \label{fig21}
+    \end{figure}
+Por último, el manejo de la rutina por medio de \texttt{ISR(TIMER1\_COMPA\_vect)} y \texttt{ISR(TIMER0\_COMPA\_vect)} fue posible tener la actualización de los LEDs conforme avanza el tiempo, de lo contrario, los intervalos de tiempo ya establecidos no harían nada. Gracias a esto se obtiene el estado de centrifugar.
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=.7\linewidth]{Imagenes/16.png}
+        \caption{Estado centrifugar, carga media.}
+        \label{fig22}
+    \end{figure}
+Finalmente, cuando se presiona el botón de carga alta, la señal de interrupción se envía correctamente, las etiquetas de los LEDs para esta carga todos están activos, las señales del osciloscopio se respetan, así como la transición de los estados. La tensión eléctrica presente en los displays es de \SI{4.21}{\volt} es la adecuada porque éstos no parpadean, esto quiere decir que nos les está llegando corriente muy alta. Por lo que se concluye que el programa es capaz de reconocer cuando se le coloca una carga alta, tal como se muestra en la siguiente transición de los estados.
+\begin{itemize}
+\item Estado suministro:
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=.7\linewidth]{Imagenes/17.png}
+        \caption{Estado suministro, carga alta.}
+        \label{fig23}
+    \end{figure}
+\item Estado lavar:
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=.7\linewidth]{Imagenes/18.png}
+        \caption{Estado lavar, carga alta.}
+        \label{fig24}
+    \end{figure}
+\item Estado enjuague:
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=.7\linewidth]{Imagenes/19.png}
+        \caption{Estado enjuague, carga alta.}
+        \label{fig25}
+    \end{figure}
+\item Estado centrifugar:
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=.7\linewidth]{Imagenes/20.png}
+        \caption{Estado centrifugar, carga alta.}
+        \label{fig26}
+    \end{figure}
+\end{itemize}
+En resumen, el haber configurado los temporizadores: \texttt{Timer/Counter0} y \texttt{Timer/Counter1} para hacer uso de \texttt{CTC}, los registros \texttt{TCCR04}, \texttt{WGM01} junto con un valor de comparación en las macros \texttt{OCR0A} y \texttt{OCR1A}, así como el uso de pre-escaler con sus respectivos registros, esto para reducir la señal eléctrica de alta frecuencia a una frecuencia menor por medio de una división \cite{web}, y también el uso de las interrupciones para cada timer. Esto en conjunto, con las máquinas de estado y las demás funciones permiten el buen funcionamiento de la lavadora automática.
 
 
-Lo segundo es que se muestra la función: \texttt{led\_off} que se encarga de limpiar los puertos donde están conectados las cargas y los estados, en otras palabras apaga los LEDs que indican el comportamiento actual de la lavadora.
+
